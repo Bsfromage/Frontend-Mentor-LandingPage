@@ -259,7 +259,7 @@ ul {
 }
 
 /* Wider screen */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 600px) {
   /* Sections */
   .showcase {
     display: grid;
