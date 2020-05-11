@@ -18,10 +18,6 @@ body {
   margin: 0;
 }
 
-/* Page wrapper */
-.wrapper {
-}
-
 /* Sections */
 .showcase {
   display: grid;
@@ -39,7 +35,7 @@ body {
 }
 
 .main-nav {
-  margin: 1rem 1rem 0rem;
+  margin: 0 4vw;
   height: 10vh;
   grid-area: nav;
   display: flex;
@@ -49,19 +45,23 @@ body {
 }
 
 .intro-text {
-  margin: 1rem 1.75rem;
+  margin: 0 4vw;
   display: flex;
   flex-direction: column;
   height: 50vh;
   grid-area: txt1;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .intro-display {
-  margin: 3rem 0rem 1rem;
+  margin: 0 4vw;
   height: 40vh;
+  display: flex;
+  flex-direction: column;
   grid-area: img1;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-1 {
@@ -171,6 +171,7 @@ body {
 h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  margin: 2vh 0 0 0;
 }
 
 ul {
@@ -207,7 +208,7 @@ ul {
 }
 
 .intro-img {
-  width: 25rem;
+  width: 80vw;
 }
 
 .footer-img {
@@ -246,7 +247,7 @@ ul {
 }
 
 .start-btn {
-  margin-top: 1.5rem;
+  margin-top: 2vh;
   padding: 0.75rem 4rem;
   background-color: var(--pink);
   color: white;
@@ -255,4 +256,47 @@ ul {
 
 .action-btn {
   margin-top: 0;
+}
+
+/* Wider screen */
+@media screen and (min-width: 375px) {
+  /* Sections */
+  .showcase {
+    display: grid;
+    grid-template-areas:
+      "nav   nav"
+      "txt1 img1";
+  }
+
+  .main-nav {
+    height: 15vh;
+    margin: 0 2vw 0;
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .intro-text {
+    height: 85vh;
+    width: 44vw;
+    margin: 0 2vw 0 4vw;
+    grid-area: txt1;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .intro-display {
+    height: 85vh;
+    width: 44vw;
+    margin: 0 4vw 0 2vw;
+    grid-area: img1;
+  }
+
+  .intro-img {
+    max-width: 100%;
+    width: 100%;
+  }
 }
